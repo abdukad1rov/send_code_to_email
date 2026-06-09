@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/singin.css') }}">
+    <title>Войти</title>
+</head>
+<body>
+<section>
+    <div class="head-block">
+        <div class="left-block">
+            <div class="link">
+                <a class="link-1" href="#">Вход</a>
+                <a class="link-2" href="#">Регистрация </a>
+            </div>
+
+            <form method="post">
+                <h1>Мы скучали!</h1>
+                <h2>Войдите, чтобы продолжить</h2>
+
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="">Логин</label>
+                </div>
+
+                <div class="inputbox">
+                    <input type="password" required>
+                    <label for="">Пароль</label>
+                </div>
+
+                <div class="forget">
+                    <label for="checkbox">Запомни меня
+                        <input type="checkbox" id="checkbox">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </span>
+                    </label>
+
+                    <a href="#" class="pass">Забыли пароль?</a>
+                </div>
+
+                <button type="submit" class="btn">Войти</button>
+
+                <div class="network">
+                    <span class="text">или войдите через</span>
+
+                    <div class="netwok">
+                        <a href="#" class="face">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" class="face2">
+                            <i class="bi bi-google"></i>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="right-block">
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,156 @@
+body{
+
+    margin: 0;
+}
+
+
+
+
+
+
+
+/* HEADER */
+header{
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    z-index: 1000;
+    background: #fff;
+    -webkit-box-shadow: 0 25px rgba(0, 0, 0, 15);
+        box-shadow: 0 2px 25px rgba(0, 0, 0, 15);
+}
+
+.header__img{
+    height: 50px;
+    width: 50px;
+}
+
+footer{
+    padding: 20px;
+}
+
+.page{
+    /*overflow: hidden;*/
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content{
+    /*max-width: 100vh;*/
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex: 1 1 auto;
+}
+
+
+/* POST */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.g-4 {
+    gap: 1.5rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.row-cols-lg-3 > * {
+    width: calc(33.333% - 1rem);
+}
+
+.feature {
+    padding: 20px;
+    -webkit-box-shadow: 0 25px rgba(0, 0, 139, 1);
+        box-shadow: 0 2px 25px rgba(0, 0, 139, 1);
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.fs-2 {
+    font-size: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.text-body-emphasis {
+    color: #000;
+}
+
+.feature h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.icon-link:hover {
+    color: #0a58ca;
+}
+
+.bi {
+    fill: currentColor;
+}
+
+@media (max-width: 992px) {
+    .row-cols-lg-3 > * {
+        width: 100%;
+    }
+}

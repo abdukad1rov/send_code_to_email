@@ -1,0 +1,85 @@
+/* Фон страницы */
+body {
+    background-color: #161e31;
+    font-family: 'Raleway', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Карточка формы */
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 35px;
+    background: #2d3250;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+    color: white;
+}
+
+/* Заголовок */
+.form-signin h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Input блоки */
+.form-floating {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    background: #1e2238;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.form-control:focus {
+    background: #1e2238;
+    color: white;
+    box-shadow: 0 0 10px rgba(144, 157, 223, 0.5);
+    border: none;
+}
+
+/* label */
+.form-floating label {
+    color: #aaa;
+}
+
+/* кнопка */
+.btn-primary {
+    background: #6c7ae0;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #5561c7;
+}
+
+/* ссылка */
+.form-signin a {
+    color: #6c7ae0;
+    text-decoration: none;
+}
+
+.form-signin a:hover {
+    text-decoration: underline;
+}
+
+/* текст снизу */
+.text-center {
+    margin-top: 10px;
+    color: #ccc;
+}

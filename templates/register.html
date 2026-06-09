@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+
+    <title>Регистрация</title>
+</head>
+<body>
+
+<main class="form-signin w-100 m-auto">
+
+    <form method="POST" onsubmit="return validateForm()">
+
+    <h1 class="h3 mb-3 fw-normal text-center">Регистрация</h1>
+
+    <!-- Email -->
+    <div class="form-floating">
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+        <label for="email">Почта</label>
+    </div>
+
+    <!-- Password -->
+    <div class="form-floating">
+        <input type="password" class="form-control" id="password" name="password"
+               placeholder="Password" oninput="checkPassword()" required>
+        <label for="password">Пароль</label>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="form-floating">
+        <input type="password" class="form-control" id="confirm_password" name="confirm_password"
+               placeholder="Confirm Password" oninput="checkPassword()" required>
+        <label for="confirm_password">Подтвердите пароль</label>
+    </div>
+
+    <!-- сообщение -->
+    <div id="msg" style="color:red; margin-top:10px;"></div>
+
+    <!-- Button -->
+    <button id="submitBtn" class="btn btn-primary w-100 py-2 mt-3" type="submit">
+        Зарегистрироваться
+    </button>
+
+    <p class="mt-3 text-center">
+        Уже есть аккаунт? <a href="{{ url_for('login') }}">Войти</a>
+    </p>
+
+</form>
+
+</main>
+
+</body>
+</html>
+
+
+<script>
+function checkPassword() {
+    let p1 = document.getElementById("password").value;
+    let p2 = document.getElementById("confirm_password").value;
+
+    if (p1 !== p2) {
+        document.getElementById("msg").innerText = "Пароли не совпадают";
+    } else {
+        document.getElementById("msg").innerText = "";
+    }
+}
+function validateForm() {
+    let pass = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm_password").value;
+
+    if (pass !== confirm) {
+        alert("Пароли не совпадают!");
+        return false;
+    }
+
+    return true;
+}
+</script>

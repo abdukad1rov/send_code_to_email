@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    {% if user %}
+        <h2>👋 Добро пожаловать, {{ user.email }}</h2>
+
+    {% else %}
+        <h2>👋 Добро пожаловать</h2>
+
+    {% endif %}
+
+    <hr>
+
+    <h4>📌 Список информации</h4>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Debitis dolorem maiores nam quam?</li>
+        <li>Accusamus, dolor quidem. Libero, veritatis.</li>
+        <li>Accusantium ea non quidem sequi.</li>
+        <li>Dicta dolorum laudantium rem sunt.</li>
+        <li>Doloremque eius placeat ratione similique.</li>
+        <li>A consequatur eaque quidem voluptate.</li>
+        <li>Ea nesciunt numquam perspiciatis similique.</li>
+        <li>Aliquam laboriosam sequi tenetur totam!</li>
+        <li>Fuga harum optio qui ut?</li>
+    </ul>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все записи
+{% endblock %}
+
+{% block content %}
+<h1>все записи</h1>
+
+
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    {% for post in posts %}
+    <div class="feature col">
+        <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+                <use xlink:href="#collection"></use>
+            </svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis">{{ post.title}}</h3>
+        <p>{{ post.content}}</p> <a href="#" class="icon-link">
+        Подробнее...
+        <form method="POST" action="/delete/{{ post.id }}">
+            <button type="submit">Удалить</button>
+        </form>
+        <svg class="bi" aria-hidden="true">
+            <use xlink:href="#chevron-right"></use>
+        </svg>
+    </a></div>
+    {% endfor %}
+</div>
+
+{% endblock %}
